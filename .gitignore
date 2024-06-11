@@ -1,0 +1,7 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+technical_creed_v3/docs/current
+node_modules/
