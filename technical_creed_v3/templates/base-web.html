@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stay updated with the latest trends and insights in IT technology, covering topics like software development, cybersecurity, cloud computing, and AI."/>
+    <meta name="keywords" content="IT technology, software development, cybersecurity, cloud computing, AI, information technology, tech news, IT solutions"/>
+    <meta name="author" content="Your Name or Company Name" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="IT Technology Insights" />
+    <meta property="og:description" content="Explore the latest trends and insights in the IT technology sector." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.yourwebsite.com" />
+    <meta property="og:image" content="https://www.yourwebsite.com/image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IT Technology Insights" />
+    <meta name="twitter:description" content="Stay updated with the latest trends and insights in IT technology." />
+    <meta name="twitter:image" content="https://www.yourwebsite.com/image.jpg" />
+    <title>{% block title %}Home || TechnicalCreed{% endblock %}</title>
+    <link rel="icon" href="/assets/technical_creed_v3/img/core-img/logo.png" />
+    {{ include_style("technical_creed.bundle.css") }}
+
+    <script>
+      window.frappe = {};
+      frappe.ready_events = [];
+      frappe.ready = function(fn) {
+        frappe.ready_events.push(fn);
+      }
+      window.dev_server = {{ dev_server }};
+      window.socketio_port = {{ (frappe.socketio_port or 'null') }};
+      window.show_language_picker = {{ show_language_picker or 'false' }};
+    </script>
+
+  </head>
+  <body class="darker">
+    {% block header %}   
+     {% include "/templates/includes/header.html" %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    {% include "/templates/includes/footer.html" %}
+    {% endblock %}
+   <!--  All JS  -->
+   <!-- jQuery js -->
+   <script src="/assets/technical_creed_v3/js/jquery.min.js"></script>
+   <!-- Popper js -->
+   <script src="/assets/technical_creed_v3/js/popper.min.js"></script>
+   <!-- Bootstrap js -->
+   <script src="/assets/technical_creed_v3/js/bootstrap.min.js"></script>
+   <!-- All Plugins js -->
+   <script src="/assets/technical_creed_v3/js/plugins.js"></script>
+   <!-- Active js -->
+   <script src="/assets/technical_creed_v3/js/script.js"></script>
+
+
+   {% block base_scripts %}
+   <!-- js should be loaded in body! -->
+   <script>
+     frappe.boot = {{ boot }}
+     // for backward compatibility of some libs
+     frappe.sys_defaults = frappe.boot.sysdefaults;
+   </script>
+   {{ include_script('frappe-web.bundle.js') }}
+   {% endblock %}
+ 
+   {%- for link in web_include_js %}
+   {{ include_script(link) }}
+   {%- endfor -%}
+ 
+   {%- block script %}
+     {% if colocated_js -%}
+       <script>{{ colocated_js }}</script>
+     {%- endif %}
+   {%- endblock %}
+   <!-- csrf_token -->
+   {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+     
+ </body>
+
+
+
+</html>
