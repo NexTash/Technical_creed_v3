@@ -39,7 +39,7 @@ app_license = "MIT"
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "indexm.html"
+home_page = "index.html"
 
 # website user home page (by Role)
 # role_home_page = {
