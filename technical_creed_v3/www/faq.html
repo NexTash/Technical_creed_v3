@@ -63,23 +63,23 @@
           </div>
           
           <div class="col-12 col-lg-6 col-md-12">
-            {% for doc in docs %}
-            <div class="dream-faq-area mt-s">
-              <dl style="margin-bottom: 0">
-                <!-- Single FAQ Area -->
-                <dt class="wave fadeInUp" data-wow-delay="0.2s">
-                  {{ doc.question }}
-                </dt>
-                <dd class="fadeInUp" data-wow-delay="0.3s">
-                  <p>
+    {% for doc in docs %}
+    <div class="dream-faq-area mt-s">
+        <dl style="margin-bottom: 0;">
+            <!-- Single FAQ Area -->
+            <dt class="wave fadeInUp" data-wow-delay="0.2s">
+                {{ doc.question }}
+            </dt>
+            <dd class="fadeInUp" data-wow-delay="0.3s">
+                <p>
                     {{ doc.answer }}
-                  </p>
-                </dd>
-                
-                
-            </div>
-            {% endfor %}
-          </div>
+                </p>
+            </dd>
+        </dl>
+    </div>
+    {% endfor %}
+</div>
+
          
         </div>
       </div>

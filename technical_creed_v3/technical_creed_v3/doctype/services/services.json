@@ -8,11 +8,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "order_by",
   "image",
-  "title",
-  "description",
+  "column_break_aeg06",
   "feature",
-  "order_by"
+  "title",
+  "section_break_hkc1y",
+  "description"
  ],
  "fields": [
   {
@@ -27,7 +29,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Description"
   },
   {
@@ -40,11 +42,19 @@
    "fieldname": "order_by",
    "fieldtype": "Data",
    "label": "Order By"
+  },
+  {
+   "fieldname": "column_break_aeg06",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hkc1y",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-25 11:31:25.998045",
+ "modified": "2024-07-03 16:19:55.315451",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Services",
