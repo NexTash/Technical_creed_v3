@@ -20,7 +20,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldtype": "Text Editor",
    "label": "Description"
   },
   {
@@ -32,7 +32,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-13 10:32:42.894648",
+ "modified": "2024-07-06 19:43:09.702788",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Pricing",

@@ -19,13 +19,13 @@
   },
   {
    "fieldname": "answer",
-   "fieldtype": "Data",
+   "fieldtype": "Text Editor",
    "label": "Answer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-13 11:31:08.293225",
+ "modified": "2024-07-06 20:30:26.188813",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "FAQ",

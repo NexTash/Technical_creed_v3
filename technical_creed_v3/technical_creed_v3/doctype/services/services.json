@@ -29,7 +29,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Description"
   },
   {
@@ -54,7 +54,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-03 16:19:55.315451",
+ "modified": "2024-07-06 20:36:48.953705",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Services",

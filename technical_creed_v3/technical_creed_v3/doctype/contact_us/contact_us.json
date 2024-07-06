@@ -31,13 +31,13 @@
   },
   {
    "fieldname": "message",
-   "fieldtype": "Data",
+   "fieldtype": "Text Editor",
    "label": "Message"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-02 16:56:31.321606",
+ "modified": "2024-07-06 20:37:09.366897",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Contact us",
