@@ -2,203 +2,133 @@
 {% block title %} FAQ || TechnicalCreed{% endblock %}
 {% block content %}
 <!-- Welcome Area Start -->
-    <div class="breadcumb-area">
-      <!-- breadcumb content -->
-      <div class="breadcumb-content">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-12">
-              <nav aria-label="breadcrumb" class="breadcumb--con text-center">
-                <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">
-                  FAQ
-                </h2>
-                <ol 
-                  class="bg-none breadcrumb justify-content-center wow fadeInUp"
-                  data-wow-delay="0.4s"
-                >
-                  <li class="breadcrumb-item"><a href="#" class="anchor-link">Home</a></li>
-                  <li class="breadcrumb-item w-text active" aria-current="page">
-                    FAQ
-                  </li>
-                </ol>
-              </nav>
-            </div>
-          </div>
+<div class="breadcumb-area">
+  <!-- breadcumb content -->
+  <div class="breadcumb-content">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <nav aria-label="breadcrumb" class="breadcumb--con text-center">
+            <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">
+              FAQ
+            </h2>
+            <ol class="bg-none breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+              <li class="breadcrumb-item"><a href="#" class="anchor-link">Home</a></li>
+              <li class="breadcrumb-item w-text active" aria-current="page">
+                FAQ
+              </li>
+            </ol>
+          </nav>
         </div>
       </div>
     </div>
-    <!-- Welcome Area End -->
+  </div>
+</div>
+<!-- Welcome Area End -->
 
-    <!-- FAQ & Timeline Area Start -->
-    <div class="faq-timeline-area section-padding-100-85" id="faq">
-      <div class="container">
-        <div class="section-heading text-center">
-          <div
-            class="dream-dots justify-content-center fadeInUp"
-            data-wow-delay="0.2s"
-          >
-            <img
-              src="./assets/technical_creed_v3/img/svg/divider-01.svg"
-              width="100"
-              class="mb-15"
-              alt="divider"
-            />
-          </div>
-          <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Frequently Questions</h2>
-          <p class="fadeInUp" data-wow-delay="0.4s">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-            accumsan nisi Ut ut felis congue nisl hendrerit commodo.
-          </p>
-        </div>
-        <div class="row align-items-center">
-          <div
-            class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-12"
-          >
-            <img
-              draggable="false"
-              src="./assets/technical_creed_v3/img/core-img/img2.png"
-              alt=""
-              class="center-block img-responsive"
-            />
-          </div>
-          
-          <div class="col-12 col-lg-6 col-md-12">
-    {% for doc in docs %}
-    <div class="dream-faq-area mt-s">
-        <dl style="margin-bottom: 0;">
+<!-- FAQ & Timeline Area Start -->
+<div class="faq-timeline-area section-padding-100-85" id="faq">
+  <div class="container">
+    <div class="section-heading text-center">
+      <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+        <img src="./assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mb-15" alt="divider" />
+      </div>
+      <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Frequently Questions</h2>
+      <p class="fadeInUp" data-wow-delay="0.4s">
+        - We’re a diverse team that works with attention to details, enjoys community gatherings, and aspires to make a
+        significant impact in the world.
+      </p>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-12">
+        <img draggable="false" src="./assets/technical_creed_v3/img/core-img/img2.webp" alt=""
+          class="center-block img-responsive" />
+      </div>
+
+      <div class="col-12 col-lg-6 col-md-12">
+        {% for doc in docs %}
+        <div class="dream-faq-area mt-s">
+          <dl style="margin-bottom: 0;">
             <!-- Single FAQ Area -->
             <dt class="wave fadeInUp" data-wow-delay="0.2s">
-                {{ doc.question }}
+              {{ doc.question }}
             </dt>
             <dd class="fadeInUp" data-wow-delay="0.3s">
-                <p>
-                    {{ doc.answer }}
-                </p>
+              <p>
+                {{ doc.answer }}
+              </p>
             </dd>
-        </dl>
+          </dl>
+        </div>
+        {% endfor %}
+      </div>
+
+
     </div>
-    {% endfor %}
+  </div>
 </div>
+<!-- FAQ & Timeline Area End -->
 
-         
+<section class="special fuel-features section-padding-0-100 clearfix">
+  <div class="container has-shadow">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+        <div class="who-we-contant">
+          <img src="./assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mb-15" alt="divider" />
+          <h4 class="fadeInUp w-text" data-wow-delay="0.3s">Our Main Features</h4>
+          <p class="mb-30 fadeInUp" data-wow-delay="0.4s">
+            Our commitment to excellence is reflected in our diverse range of services and expertise in the IT sector.
+            We strive to deliver the best solutions tailored to your needs.
+          </p>
+          <ul class="services-block-four v2">
+            <li class="inner-box">
+              <div class="icon-font-box">01</div>
+              <h3 class="w-text">Creative & Reliable IT Agency</h3>
+              <div class="text width-80">
+                Our team combines creativity with technical expertise to provide reliable IT solutions that help your
+                business thrive.
+              </div>
+            </li>
+            <li class="inner-box">
+              <div class="icon-font-box">02</div>
+              <h3 class="w-text">Strong Blockchain Experts Team</h3>
+              <div class="text width-80">
+                We have a dedicated team of blockchain experts who can help you navigate the complexities of blockchain
+                technology and its applications.
+              </div>
+            </li>
+            <li class="inner-box">
+              <div class="icon-font-box">03</div>
+              <h3 class="w-text">Design and Development</h3>
+              <div class="text width-80">
+                Our design and development services are focused on creating user-friendly and efficient software
+                solutions tailored to your business requirements.
+              </div>
+            </li>
+          </ul>
+
         </div>
       </div>
-    </div>
-    <!-- FAQ & Timeline Area End -->
-
-    <section class="special fuel-features section-padding-0-100 clearfix">
-      <div class="container has-shadow">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-6">
-            <div class="who-we-contant">
-              <img
-                src="./assets/technical_creed_v3/img/svg/divider-01.svg"
-                width="100"
-                class="mb-15"
-                alt="divider"
-              />
-              <h4 class="fadeInUp w-text" data-wow-delay="0.3s">Our Main Features</h4>
-              <p class="mb-30 fadeInUp" data-wow-delay="0.4s">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-                ad, ipsam labore. Sunt iste a velit, quidem alias officia
-                aperiam.
-              </p>
-              <ul class="services-block-four v2">
-                <li class="inner-box">
-                  <div class="icon-font-box">01</div>
-                  <h3 class="w-text">Creative & Reliable IT Agency</h3>
-                  <div class="text width-80">
-                    Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing
-                    elit alias officia aperiam.
-                  </div>
-                </li>
-                <li class="inner-box">
-                  <div class="icon-font-box">02</div>
-                  <h3 class="w-text">Strong Blockchain Experts Team</h3>
-                  <div class="text width-80">
-                    Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing
-                    elit alias officia aperiam.
-                  </div>
-                </li>
-                <li class="inner-box">
-                  <div class="icon-font-box">03</div>
-                  <h3 class="w-text">Design and Development</h3>
-                  <div class="text width-80">
-                    Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing
-                    elit alias officia aperiam.
-                  </div>
-                </li>
-              </ul>
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-end">
+          <div class="col-sm-6">
+            <div class="gready-img">
+              <img src="./assets/technical_creed_v3/img/core-img/how2.webp" alt="" />
             </div>
           </div>
-          <div class="col-12 col-lg-6">
-            <div class="row align-items-end">
-              <div class="col-sm-6">
-                <div class="gready-img">
-                  <img src="./assets/technical_creed_v3/img/core-img/how2.png" alt="" />
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="gready-img">
-                  <img src="./assets/technical_creed_v3/img/core-img/how1.png" alt="" />
-                </div>
-              </div>
+          <div class="col-sm-6">
+            <div class="gready-img">
+              <img src="./assets/technical_creed_v3/img/core-img/how1.webp" alt="" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Team Area Start -->
-    <section class="our_team_area section-padding-100-70 clearfix" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-heading text-center">
-              <div
-                class="dream-dots justify-content-center fadeInUp"
-                data-wow-delay="0.2s"
-              >
-                <img
-                  src="./assets/technical_creed_v3/img/svg/divider-01.svg"
-                  width="100"
-                  class="mb-15"
-                  alt="divider"
-                />
-              </div>
-              <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Awesome Team</h2>
-              <p class="fadeInUp" data-wow-delay="0.4s">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.
-              </p>
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>
+</section>
+<!-- Team Area Start -->
 
-        <div class="row">
-          <!-- Single Team Member -->
-          {% for item in items %}
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-team-member fadeInUp" data-wow-delay="0.2s">
-              <!-- Image -->
-              <div class="team-member-thumb">
-                <img
-                  draggable="false"
-                  src="{{item.image}}"
-                  class="center-block"
-                  alt=""
-                />
-              </div>
-              <!-- Team Info -->
-              <div class="team-info">
-                <h5 class="w-text">{{item.member_name}}</h5>
-                <p class="g-text">{{item.designation}}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-    <!-- Team Area End -->
-     
-  {% endblock %}
+
+<!-- Team Area End -->
+
+{% endblock %}

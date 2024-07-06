@@ -830,7 +830,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 .hero-section.app{
     position: relative;
     min-height: 800px;
-    background: url('/assets/technical_creed_v3/img/bg-img/header-app.png') no-repeat top center;
+    background: url('/assets/technical_creed_v3/img/bg-img/header-app.webp') no-repeat top center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -840,7 +840,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 .hero-section.de-3{
     position: relative;
     min-height: 730px;
-    background: url(/assets/technical_creed_v3/img/bg-img/bg.png) no-repeat top center;
+    background: url(/assets/technical_creed_v3/img/bg-img/bg.webp) no-repeat top center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -1250,7 +1250,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     right: -50px;
     top: 50px;
     position: absolute;
-    background: url('/assets/technical_creed_v3/img/core-img/dots.png');
+    background: url('/assets/technical_creed_v3/img/core-img/dots.webp');
 }
 .main-ilustration-9{
     position: relative;
@@ -4723,7 +4723,7 @@ textarea:required {
 .footer-content-area{
     padding: 140px 0 80px;
     margin-top: 0px;
-    background: url(/assets/technical_creed_v3/img/bg-img/footer-bg.png) top left no-repeat;
+    background: url(/assets/technical_creed_v3/img/bg-img/footer-bg.webp) top left no-repeat;
     background-size: cover;
 }
 .footer-content-area.demo{
@@ -4789,6 +4789,10 @@ textarea:required {
 .contact_info_area .contact_info a:hover p{
     color: #fff
 }
+.contact_info a {
+    color: #fff;
+  }
+
 
 /*  Breadcumb Area  */
 
@@ -4796,7 +4800,7 @@ textarea:required {
     position: relative;
     z-index: 1;
     height: 400px !important;
-    background: url(/assets/technical_creed_v3/img/bg-img/bg.png) center no-repeat;
+    background: url(/assets/technical_creed_v3/img/bg-img/bg.webp) center no-repeat;
     background-size: cover;
 }
 .breadcumb-content {
@@ -6071,7 +6075,7 @@ body.light-version {
 	height: 70%;
 	left: 0;
 	bottom: 0;
-	background: url(/assets/technical_creed_v3/img/core-img/pattern_img.png) center;
+	background: url(/assets/technical_creed_v3/img/core-img/pattern_img.webp) center;
     background-size: cover;
 	z-index: 0
 }
