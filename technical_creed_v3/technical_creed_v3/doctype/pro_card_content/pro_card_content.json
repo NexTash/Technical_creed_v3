@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-09 13:15:55.504578",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "projects_images_and_content_section",
+  "project_title",
+  "project_sub_desc",
+  "case_study",
+  "card_images"
+ ],
+ "fields": [
+  {
+   "fieldname": "projects_images_and_content_section",
+   "fieldtype": "Section Break",
+   "label": "projects images and content"
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "project title"
+  },
+  {
+   "fieldname": "project_sub_desc",
+   "fieldtype": "Data",
+   "label": "project sub desc"
+  },
+  {
+   "fieldname": "case_study",
+   "fieldtype": "Data",
+   "label": "case study"
+  },
+  {
+   "fieldname": "card_images",
+   "fieldtype": "Attach Image",
+   "label": "card images"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-09 13:18:17.426658",
+ "modified_by": "Administrator",
+ "module": "Technical Creed V3",
+ "name": "pro card content",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

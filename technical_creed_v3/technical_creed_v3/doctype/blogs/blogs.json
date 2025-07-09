@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-09 16:55:05.242279",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "blog_title",
+  "blog_description",
+  "blog_quote",
+  "quotes_writer",
+  "blog_section_left",
+  "blog_section_right"
+ ],
+ "fields": [
+  {
+   "fieldname": "blog_title",
+   "fieldtype": "Data",
+   "label": "blog title"
+  },
+  {
+   "fieldname": "blog_description",
+   "fieldtype": "Text Editor",
+   "label": "blog description"
+  },
+  {
+   "fieldname": "blog_quote",
+   "fieldtype": "Small Text",
+   "label": "blog quote"
+  },
+  {
+   "fieldname": "blog_section_left",
+   "fieldtype": "Text Editor",
+   "label": "blog section left "
+  },
+  {
+   "fieldname": "blog_section_right",
+   "fieldtype": "Text Editor",
+   "label": "blog section right"
+  },
+  {
+   "fieldname": "quotes_writer",
+   "fieldtype": "Data",
+   "label": "quotes writer"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-09 17:16:10.832019",
+ "modified_by": "Administrator",
+ "module": "Technical Creed V3",
+ "name": "Blogs",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

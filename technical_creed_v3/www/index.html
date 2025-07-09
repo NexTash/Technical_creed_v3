@@ -120,7 +120,7 @@
                 <span class="gradient-text">Our Company Community</span>
               </div>
               <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
-                Leading IT Solutions and Cloud Technology Services.
+                {{community[0].community_title}}
               </h4>
               <img
                 src="/assets/technical_creed_v3/img/svg/divider-01.svg"
@@ -133,7 +133,7 @@
           <div class="col-12 col-lg-4 offset-lg-0 mt-s">
             <div class="who-we-contant left-bor">
               <p>
-                At Technical Creed, we specialize in delivering cutting-edge IT solutions and cloud technology services. Our dedicated team supports your business by providing seamless customer service  technology solutions tailored to your needs.
+               {{community[0].community_description}}
               </p>
               <a
                 class="btn more-btn fadeInUp"
@@ -309,7 +309,7 @@
           <div class="col-12 col-lg-6 offset-lg-0">
             <div class="who-we-contant">
               <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
-                Our Creative Projects
+                {{ptd[0].project_title}}
               </h4>
               <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" alt="divider" />
             </div>
@@ -317,32 +317,34 @@
           <div class="col-12 col-lg-6 offset-lg-0 mt-s">
             <div class="who-we-contant left-bor">
               <p>
-                 We help our clients succeed by creating brand identities, digital experiences, achieve marketing goals, streamlining there operations, finance and accountability. we have closed 200+ projects successfully, listing some of them below.
+                 {{ptd[0].projects_description}}
               </p>
             </div>
           </div>
         </div>
         <div class="row">
+            {%for card in ptc %}
           <div class="col-12 col-lg-6">
-            <!-- Content -->
+           
             <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
               <div class="project_img">
-                <img src="/assets/technical_creed_v3/img/projects/1.webp" class="img-responsive" alt="" />
+                <img src="{{card.card_images}}" class="img-responsive" alt="" />
               </div>
               <div class="project_info">
                 <h4 class="w-text">
-                  IT Check and <br />
-                  Cloud Managment
+                {{card.project_title}}
                 </h4>
-                <p>Security Testing</p>
+                <p>{{card.project_sub_desc}}</p>
                 <a href="#" class="anchor-link"
-                  >Full Case Study<span><i class="fa fa-arrow-right"></i></span
+                  >{{card.case_study}}<span><i class="fa fa-arrow-right"></i></span
                 ></a>
               </div>
             </div>
+            
           </div>
-          <div class="col-12 col-lg-6">
-            <!-- Content -->
+          {% endfor %}
+          <!-- <div class="col-12 col-lg-6">
+            
             <div class="project_single wow fadeInUp" data-wow-delay="0.3s">
               <div class="project_img">
                 <img src="/assets/technical_creed_v3/img/projects/2.webp" class="img-responsive" alt="" />
@@ -360,7 +362,7 @@
             </div>
           </div>
           <div class="col-12 col-lg-6">
-            <!-- Content -->
+            
             <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
               <div class="project_img">
                 <img src="/assets/technical_creed_v3/img/projects/3.webp" class="img-responsive" alt="" />
@@ -378,7 +380,7 @@
             </div>
           </div>
           <div class="col-12 col-lg-6">
-            <!-- Content -->
+            
             <div class="project_single wow fadeInUp" data-wow-delay="0.3s">
               <div class="project_img">
                 <img src="/assets/technical_creed_v3/img/projects/4.webp" class="img-responsive" alt="" />
@@ -394,7 +396,7 @@
                 ></a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -433,15 +435,17 @@
             <div class="dream-faq-area mt-s">
               <dl style="margin-bottom: 0">
                 <!-- Single FAQ Area -->
+                 {% for q in y %}
                 <dt class="wave fadeInUp" data-wow-delay="0.2s">
-                  What are the objectives of this Agency?
+                  {{q.question}}
                 </dt>
                 <dd class="fadeInUp" data-wow-delay="0.3s">
                   <p>
-                    Our agency is committed to achieving several key objectives, including:Providing innovative IT solutions and cloud technology services.Offering dedicated support to our clients to enhance their business operations.
+                   {{q.answer}}
                   </p>
                 </dd>
-                <!-- Single FAQ Area -->
+                {%endfor%}
+<!--                 
                 <dt class="wave fadeInUp" data-wow-delay="0.3s">
                   What is the best features and services we deiver?
                 </dt>
@@ -450,7 +454,7 @@
                     At Technical Creed, we pride ourselves on delivering top-notch features and services,Comprehensive administrative support to streamline your business processes.Efficient email support to manage communication channels effectively.
                   </p>
                 </dd>
-                <!-- Single FAQ Area -->
+                
                 <dt class="wave fadeInUp" data-wow-delay="0.4s">
                   Why this Company Service important to me?
                 </dt>
@@ -459,7 +463,7 @@
                     Our company's services play a crucial role in addressing your business needs and challenges.We help alleviate the stress of managing IT and technology-related tasks.Our services ensure seamless operation and reliability of your digital systems.
                   </p>
                 </dd>
-                <!-- Single FAQ Area -->
+                
                 <dt class="wave fadeInUp" data-wow-delay="0.5s">
                   how may I take part in and purchase this Service?
                 </dt>
@@ -467,7 +471,7 @@
                   <p>
                     Getting started with our services is simple and straightforward.Explore our website to learn more about our offerings and expertise.Contact us via phone, email, or our online inquiry form to discuss your requirements.
                   </p>
-                </dd>
+                </dd> -->
               </dl>
             </div>
           </div>
@@ -492,10 +496,18 @@
                   alt="divider"
                 />
               </div>
-              <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Meet Our Team</h2>
-              <p class="fadeInUp" data-wow-delay="0.4s">
-                Our team consists of dedicated professionals who are passionate about delivering exceptional IT solutions and cloud technology services. 
-              </p>
+           {% if team and team[0] %}
+  <h2 class="fadeInUp w-text" data-wow-delay="0.3s">{{ team[0].team_title }}</h2>
+  <p class="fadeInUp" data-wow-delay="0.4s">
+    {{ team[0].team_description }}
+  </p>
+{% else %}
+  <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Meet Our Awesome Team</h2>
+  <p class="fadeInUp" data-wow-delay="0.4s">
+    Our team consists of dedicated professionals who are passionate about delivering exceptional IT solutions and cloud technology services.
+  </p>
+{% endif %}
+
             </div>
           </div>
         </div>
