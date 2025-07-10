@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Blogs(Document):
+class Subscribe(Document):
 	pass

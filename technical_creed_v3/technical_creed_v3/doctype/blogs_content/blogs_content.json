@@ -1,16 +1,17 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-09 16:55:05.242279",
+ "autoname": "blog.###",
+ "creation": "2025-07-10 12:26:10.265720",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "blog_title",
   "blog_description",
-  "blog_quote",
-  "quotes_writer",
-  "blog_section_left",
-  "blog_section_right"
+  "blog_quotation",
+  "quotation_writer",
+  "left_section_blog",
+  "right_section_blog"
  ],
  "fields": [
   {
@@ -24,33 +25,34 @@
    "label": "blog description"
   },
   {
-   "fieldname": "blog_quote",
-   "fieldtype": "Small Text",
-   "label": "blog quote"
-  },
-  {
-   "fieldname": "blog_section_left",
+   "fieldname": "blog_quotation",
    "fieldtype": "Text Editor",
-   "label": "blog section left "
+   "label": "blog quotation"
   },
   {
-   "fieldname": "blog_section_right",
-   "fieldtype": "Text Editor",
-   "label": "blog section right"
-  },
-  {
-   "fieldname": "quotes_writer",
+   "fieldname": "quotation_writer",
    "fieldtype": "Data",
-   "label": "quotes writer"
+   "label": "quotation writer"
+  },
+  {
+   "fieldname": "left_section_blog",
+   "fieldtype": "Text Editor",
+   "label": "left section blog"
+  },
+  {
+   "fieldname": "right_section_blog",
+   "fieldtype": "Text Editor",
+   "label": "right section blog"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-09 17:16:10.832019",
+ "modified": "2025-07-10 15:11:31.660152",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
- "name": "Blogs",
+ "name": "Blogs Content",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

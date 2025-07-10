@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestBlogs(FrappeTestCase):
+class TestOtherProjectsSide(FrappeTestCase):
 	pass

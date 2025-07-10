@@ -3,7 +3,6 @@
 {% block content %}
 <!--  Welcome Area Start  -->
 <div class="breadcumb-area">
-    <!-- breadcumb content -->
     <div class="breadcumb-content">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
@@ -11,8 +10,8 @@
                     <nav aria-label="breadcrumb" class="breadcumb--con text-center">
                         <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">Project Details</h2>
                         <ol class="bg-none breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
-                            <li class="breadcrumb-item"><a class="anchor-link" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="anchor-link" href="#">Project</a></li>
+                            <li class="breadcrumb-item"><a class="anchor-link" href="./index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a class="anchor-link" href="./projects.html">Project</a></li>
                             <li class="breadcrumb-item w-text active" aria-current="page">Project Details</li>
                         </ol>
                     </nav>
@@ -22,91 +21,104 @@
     </div>
 </div>
 <!--  Welcome Area End  -->
+
 <!--  Blog Area Start  -->
 <section class="blog-area section-padding-100-85">
     <div class="container">
-
         <div class="row">
             <div class="col-12 col-md-9">
                 <div class="single-blog-area wow fadeInUp" data-wow-delay="0.2s">
-                    <!-- Post Thumbnail -->
                     <div class="blog_thumbnail">
-                        <img src="./assets/technical_creed_v3/img/projects/project-details.jpg" alt="">
+                        <img src="/assets/technical_creed_v3/img/projects/project-details.jpg" alt="">
                     </div>
-                    <!-- Post Content -->
+
                     <div class="blog-content">
-                        {% if blog %}
-                        {% for blogs in blog %}
-                        <h4 class="post-title w-text">{{ blogs.blog_title }}</h4>
-                        <p>{{ blogs.blog_description }}</p>
+                        {% if content %}
+                        {% for ctent in content %}
+                        <h4 class="post-title w-text">{{ ctent.blog_title }}</h4>
+                        <p>{{ ctent.blog_description }}</p>
                         <blockquote>
-                            <h5 class="w-text">{{ blogs.blog_quote }}</h5>
-                            <span>{{ blogs.quotes_writer }}</span>
+                            <h5 class="w-text">"{{ ctent.blog_quotation }}"</h5>
+                            <span>{{ ctent.quotation_writer }}</span>
                         </blockquote>
                         <div class="row">
                             <div class="col-lg-6">
-                                <p>{{ blogs.blog_section_left }}</p>
+                                <p>{{ ctent.left_section_blog }}</p>
                             </div>
                             <div class="col-lg-6">
-                                <p>{{ blogs.blog_section_right }}</p>
+                                <p>{{ ctent.right_section_blog }}</p>
                             </div>
                         </div>
                         {% endfor %}
                         {% else %}
-                        <p>No blogs found.</p>
+                        <p>No blogs Available</p>
                         {% endif %}
                     </div>
-
                 </div>
             </div>
+
             <div class="col-12 col-md-3 mt-s">
                 <div class="sidebar-area">
-                    <!-- Don't Miss Widget -->
                     <div class="donnot-miss-widget mb-50">
                         <div class="widget-title wow fadeInUp" data-wow-delay="0.3s">
                             <h5 class="w-text">Don't miss Other Projects</h5>
                         </div>
-                        <!-- Single Don't Miss Post -->
+
+                        {% if crd %}
+                        {% for card in crd %}
                         <div class="single-dont-miss-post mb-30 wow fadeInUp" data-wow-delay="0.4s">
                             <div class="dont-miss-post-thumb">
-                                <img src="./assets/technical_creed_v3/img/projects/2.jpg" alt="">
+                                <img src="{{ card.card_img }}" alt="">
                             </div>
                             <div class="dont-miss-post-content">
-                                <a href='projects.html'>IT & Cloud Managment</a>
+                                <a href="projects.html">{{ card.title }}</a>
+                                <span>{{ card.date }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        <!-- Static fallback posts -->
+                        <div class="single-dont-miss-post mb-30 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dont-miss-post-thumb">
+                                <img src="/assets/technical_creed_v3/img/projects/2.jpg" alt="">
+                            </div>
+                            <div class="dont-miss-post-content">
+                                <a href="projects.html">IT & Cloud Managment</a>
                                 <span>Nov 29, 2024</span>
                             </div>
                         </div>
-                        <!-- Single Don't Miss Post -->
                         <div class="single-dont-miss-post mb-30 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="dont-miss-post-thumb">
-                                <img src="./assets/technical_creed_v3/img/projects/3.jpg" alt="">
+                                <img src="/assets/technical_creed_v3/img/projects/3.jpg" alt="">
                             </div>
                             <div class="dont-miss-post-content">
-                                <a href='projects.html'>System Security Steps</a>
+                                <a href="projects.html">System Security Steps</a>
                                 <span>March 29, 2024</span>
                             </div>
                         </div>
-                        <!-- Single Don't Miss Post -->
                         <div class="single-dont-miss-post wow fadeInUp" data-wow-delay="0.6s">
                             <div class="dont-miss-post-thumb">
-                                <img src="./assets/technical_creed_v3/img/projects/4.jpg" alt="">
+                                <img src="/assets/technical_creed_v3/img/projects/4.jpg" alt="">
                             </div>
                             <div class="dont-miss-post-content">
-                                <a href='projects.html'>Top Cloud Deployment</a>
+                                <a href="projects.html">Top Cloud Deployment</a>
                                 <span>March 29, 2024</span>
                             </div>
                         </div>
+                        {% endif %}
                     </div>
+
                     <!-- Subscribe Widget -->
                     <div class="subscribe-widget">
                         <div class="widget-title wow fadeInUp" data-wow-delay="0.9s">
                             <h5 class="w-text">subscribe</h5>
                         </div>
                         <div class="subscribe-form wow fadeInUp" data-wow-delay="1s">
-                            <form action="#">
-                                <input type="email" name="email" id="subs_email" placeholder="Your Email">
+                            <form onsubmit="subscribe_email(); return false;">
+                                <input type="email" name="email" id="subs_email" placeholder="Your Email" required>
                                 <button type="submit" class="btn info-btn">subscribe</button>
                             </form>
+                            <div style="color: aqua;" id="subscribe_message"></div>
                         </div>
                     </div>
                 </div>
@@ -115,4 +127,24 @@
     </div>
 </section>
 <!--  Blog Area End  -->
+
+<script>
+    function subscribe_email() {
+        var email = document.getElementById("subs_email").value;
+
+        if (!email) {
+            document.getElementById("subscribe_message").innerHTML = "Please enter your email.";
+            return;
+        }
+
+        frappe.call({
+            method: 'technical_creed_v3.events.subscribe.subscribe',
+            args: { email: email },
+            callback(r) {
+                document.getElementById("subscribe_message").innerHTML = r.message || "Subscription successful.";
+                document.getElementById("subs_email").value = "";
+            }
+        });
+    }
+</script>
 {% endblock %}

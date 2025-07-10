@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "community.###",
  "creation": "2025-07-09 14:42:27.232491",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -23,10 +24,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-09 14:43:21.212046",
+ "modified": "2025-07-10 15:21:18.911906",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Community",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

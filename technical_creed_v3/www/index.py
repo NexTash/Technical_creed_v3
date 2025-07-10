@@ -10,9 +10,8 @@ def get_context(context):
   ptc=frappe.get_all("pro card content",["*"])
   y = frappe.get_all("Why Choose Us", ["*"] , order_by="modified asc")
   community=frappe.get_all("Community",["*"])
+  agency_card=frappe.get_all("services agency facts", ["*"] , order_by="modified asc")
 
-
-        
   context.update({
     "pricing" : pricing,
     # "customers" : customers,
@@ -22,6 +21,7 @@ def get_context(context):
     "ptd":ptd,
     "ptc":ptc,
     "y":y,
-    "community":community
+    "community":community,
+    "agency_card":agency_card
 
   })

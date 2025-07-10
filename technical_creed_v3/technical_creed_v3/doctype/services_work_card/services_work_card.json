@@ -1,33 +1,39 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "choose-us.###",
- "creation": "2025-07-09 14:25:27.965203",
+ "autoname": "services-card.###",
+ "creation": "2025-07-10 09:42:45.323039",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "question",
-  "answer"
+  "work_card_img",
+  "work_card_title",
+  "work_card_des"
  ],
  "fields": [
   {
-   "fieldname": "question",
-   "fieldtype": "Data",
-   "label": "Question "
+   "fieldname": "work_card_img",
+   "fieldtype": "Attach Image",
+   "label": "work card img"
   },
   {
-   "fieldname": "answer",
+   "fieldname": "work_card_title",
+   "fieldtype": "Data",
+   "label": "work card title"
+  },
+  {
+   "fieldname": "work_card_des",
    "fieldtype": "Text Editor",
-   "label": "Answer"
+   "label": "work card des"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 15:24:13.697561",
+ "modified": "2025-07-10 15:15:31.161522",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
- "name": "Why Choose Us",
+ "name": "services work card",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

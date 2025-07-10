@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "project-card.###",
  "creation": "2025-07-09 13:15:55.504578",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -41,10 +42,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-09 13:18:17.426658",
+ "modified": "2025-07-10 15:26:10.849431",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "pro card content",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

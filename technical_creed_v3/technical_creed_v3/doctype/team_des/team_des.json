@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "team-title-desc.###",
  "creation": "2025-07-09 12:07:52.727993",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -29,10 +30,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-09 12:09:18.205883",
+ "modified": "2025-07-10 16:50:34.232950",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Team Des",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

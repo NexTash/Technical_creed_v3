@@ -11,7 +11,7 @@
           <nav aria-label="breadcrumb" class="breadcumb--con text-center">
             <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">Projects</h2>
             <ol class="bg-none breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
-              <li class="breadcrumb-item"><a href="#" class="anchor-link">Home</a></li>
+              <li class="breadcrumb-item"><a href="./index.html" class="anchor-link">Home</a></li>
               <li class="breadcrumb-item w-text active" aria-current="page">Projects</li>
             </ol>
           </nav>
@@ -24,46 +24,56 @@
 <!-- ✅ Project Title & Description -->
 <section class="Projects section-padding-100">
   <div class="container">
+    
+    <!-- Top Section with Title and Description -->
     <div class="row align-items-center mb-50">
       {% if ptd and ptd[0] %}
-      <div class="col-12 col-lg-6">
-        <div class="who-we-contant">
-          <h4 class="fadeInUp w-text" data-wow-delay="0.3s">{{ ptd[0].project_title }}</h4>
-          <img src="./assets/technical_creed_v3/img/svg/divider-01.svg" width="100" alt="divider" />
+        <div class="col-12 col-lg-6">
+          <div class="who-we-contant">
+            <h4 class="fadeInUp w-text" data-wow-delay="0.3s">{{ ptd[0].project_title }}</h4>
+            <img src="./assets/technical_creed_v3/img/svg/divider-01.svg" width="100" alt="divider" />
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-6 mt-s">
-        <div class="who-we-contant left-bor">
-          <p>{{ ptd[0].projects_description }}</p>
+        <div class="col-12 col-lg-6 mt-s">
+          <div class="who-we-contant left-bor">
+            <p>{{ ptd[0].projects_description }}</p>
+          </div>
         </div>
-      </div>
       {% else %}
-      <div class="col-12">
-        <h4 class="text-center w-text">No Project Data Found</h4>
-      </div>
+        <div class="col-12">
+          <h4 class="text-center w-text">No Found Projects title and description</h4>
+        </div>
       {% endif %}
     </div>
 
+    <!-- Projects Cards Section -->
     <div class="row">
-      {% for card in ptc %}
-      <div class="col-12 col-lg-6">
-        <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
-          <div class="project_img">
-            <img src="{{ card.card_images }}" class="img-responsive" alt="" />
+      {% if ptc %}
+        {% for card in ptc %}
+          <div class="col-12 col-lg-6">
+            <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
+              <div class="project_img">
+                <img src="{{ card.card_images }}" class="img-responsive" alt="" />
+              </div>
+              <div class="project_info">
+                <h4 class="w-text">{{ card.project_title }}</h4>
+                <p>{{ card.project_sub_desc }}</p>
+                <a href="projectdetail.html" class="anchor-link">
+                  {{ card.case_study }}<span><i class="fa fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="project_info">
-            <h4 class="w-text">{{ card.project_title }}</h4>
-            <p>{{ card.project_sub_desc }}</p>
-            <a href="project-details.html" class="anchor-link">
-              {{ card.case_study }}<span><i class="fa fa-arrow-right"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+        {% endfor %}
+      {% else %}
+      <h1 style="color: aqua;">card data here dynamic</h1>
+      {% endif %}
+    </div> <!-- ✅ Closing div for project cards row -->
+    
+  </div> <!-- container -->
 </section>
+
+
 
 <!-- ✅ Company Community Section -->
 <section class="about-us-area section-padding-0-0 clearfix" id="about">

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "project-title-des.###",
  "creation": "2025-07-09 12:48:49.527222",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -29,10 +30,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-09 12:50:14.255139",
+ "modified": "2025-07-10 15:29:27.506453",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
  "name": "Project title des",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

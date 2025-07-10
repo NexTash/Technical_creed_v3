@@ -14,7 +14,7 @@
               About us
             </h2>
             <ol class="bg-none breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
-              <li class="breadcrumb-item"><a href="#" class="anchor-link">Home</a></li>
+              <li class="breadcrumb-item"><a href="./index.html" class="anchor-link">Home</a></li>
               <li class="breadcrumb-item w-text active" aria-current="page">
                 About us
               </li>
@@ -97,8 +97,35 @@
 
 <!-- About Us Area Start -->
 <section class="about-us-area section-padding-100 clearfix" id="about">
-  <div class="container">
+   <div class="container">
     <div class="row align-items-center">
+      {% if community and community[0] %}
+      <!-- Dynamic Content from community -->
+      <div class="col-12 col-lg-4 offset-lg-0 col-md-6">
+        <div class="welcome-meter">
+          <img draggable="false" src="/assets/technical_creed_v3/img/core-img/img4.webp" alt="" />
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 offset-lg-0 mt-s">
+        <div class="who-we-contant">
+          <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s">
+            <span class="gradient-text">Our Company Community</span>
+          </div>
+          <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
+            {{ community[0].community_title }}
+          </h4>
+          <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mt-15" alt="divider" />
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 offset-lg-0 mt-s">
+        <div class="who-we-contant left-bor">
+          <p>{{ community[0].community_description }}</p>
+          <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="about-us.html">Read More</a>
+        </div>
+      </div>
+
+      {% else %}
+      <!-- Static Default Content if no community data -->
       <div class="col-12 col-lg-4 offset-lg-0 col-md-6">
         <div class="welcome-meter">
           <img draggable="false" src="./assets/technical_creed_v3/img/core-img/img4.webp" alt="" />
@@ -125,6 +152,7 @@
           <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="about-us.html">Read More</a>
         </div>
       </div>
+      {% endif %}
     </div>
   </div>
 </section>

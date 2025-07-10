@@ -1,33 +1,39 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "choose-us.###",
- "creation": "2025-07-09 14:25:27.965203",
+ "autoname": "sidebar-projects.###",
+ "creation": "2025-07-10 13:09:57.860909",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "question",
-  "answer"
+  "card_img",
+  "title",
+  "date"
  ],
  "fields": [
   {
-   "fieldname": "question",
-   "fieldtype": "Data",
-   "label": "Question "
+   "fieldname": "card_img",
+   "fieldtype": "Attach Image",
+   "label": "card img"
   },
   {
-   "fieldname": "answer",
-   "fieldtype": "Text Editor",
-   "label": "Answer"
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "title"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 15:24:13.697561",
+ "modified": "2025-07-10 15:07:25.447337",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
- "name": "Why Choose Us",
+ "name": "Other Projects Side",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

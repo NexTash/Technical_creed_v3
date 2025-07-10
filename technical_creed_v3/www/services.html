@@ -13,7 +13,7 @@
                         <nav aria-label="breadcrumb" class="breadcumb--con text-center">
                             <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">Services</h2>
                             <ol class="bg-none breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
-                                <li class="breadcrumb-item"><a class="anchor-link" href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a class="anchor-link" href="./index.html">Home</a></li>
                                 <li class="breadcrumb-item w-text active" aria-current="page">Services</li>
                             </ol>
                         </nav>
@@ -68,71 +68,98 @@
 
     <!-- Facts Start -->
     <div class="section-padding-0-0" >
-        <div class="container pre-sale-bg">
-            <div class="section-heading text-center">
-            
-                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                    <span class="gradient-text white">Numbers Are Talking</span>
-                </div>
-                <h2 class="w-text">Our Agency Facts</h2>
-                <p class="w-text">- TecCreed can help you become more digitally independent. We offer specialized and dedicated services that will help your business grow. Our team is driven by passion and determination to go above and beyond your standards and open up new opportunities for success.</p>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <div class="fact-box count-box col-lg-3 col-xs-12">
-                      <div class="inner">
-                       <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact1.webp" alt=""></div>
-                          <div class="content">
-                              <div class="count-outer">
-                                  <span class="count-text counter">327</span>
-                              </div>
-                              <div class="counter-title">Happy Clients</div>
-                          </div>
-                      </div>
-                    </div>
-
-                    <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-xs">
-                      <div class="inner">
-                       <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact2.webp" alt=""></div>
-                          <div class="content">
-                              <div class="count-outer">
-                                  <span class="count-text counter">3041</span>
-                              </div>
-                              <div class="counter-title">Projects Taken</div>
-                          </div>
-                      </div>
-                    </div>
-
-                    <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-sm">
-                      <div class="inner">
-                       <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact3.webp" alt=""></div>
-                          <div class="content">
-                              <div class="count-outer">
-                                  <span class="count-text counter">23</span>
-                              </div>
-                              <div class="counter-title">Awards Won</div>
-                          </div>
-                      </div>
-                    </div>
-
-                    <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-sm">
-                      <div class="inner">
-                       <div class="icon-box"><img src="/assets/technical_creed_v3/img/icons/fact4.webp" alt=""></div>
-                          <div class="content">
-                              <div class="count-outer">
-                                  <span class="count-text counter">940</span>
-                              </div>
-                              <div class="counter-title"> Secured Devices</div>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+<div class="container pre-sale-bg">
+  <div class="section-heading text-center">
+    <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+      <span class="gradient-text white">Numbers Are Talking</span>
     </div>
+    <h2 class="w-text">Our Agency Facts</h2>
+    <p class="w-text">
+      - TecCreed can help you become more digitally independent. We offer specialized and dedicated services that will help your business grow. Our team is driven by passion and determination to go above and beyond your standards and open up new opportunities for success.
+    </p>
+  </div>
+  <!-- strt -->
+  <div class="row align-items-center">
+    {% if agency_card %}
+      {% for card in agency_card %}
+      <div class="col-lg-3 col-sm-6">
+        <div class="fact-box count-box">
+          <div class="inner">
+            <div class="icon-box"><img src="{{ card.card_img }}" alt=""></div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">{{ card.counter_no }}</span>
+              </div>
+              <div class="counter-title">{{ card.title }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+    
+      <div class="col-lg-3 col-sm-6">
+        <div class="fact-box count-box">
+          <div class="inner">
+            <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact1.webp" alt=""></div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">327</span>
+              </div>
+              <div class="counter-title">Happy Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <section class="darky how section-padding-0-70">
+      <div class="col-lg-3 col-sm-6">
+        <div class="fact-box count-box">
+          <div class="inner">
+            <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact2.webp" alt=""></div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">3041</span>
+              </div>
+              <div class="counter-title">Projects Taken</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="fact-box count-box">
+          <div class="inner">
+            <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact3.webp" alt=""></div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">23</span>
+              </div>
+              <div class="counter-title">Awards Won</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="fact-box count-box">
+          <div class="inner">
+            <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact4.webp" alt=""></div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">940</span>
+              </div>
+              <div class="counter-title">Secured Devices</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  <!-- end  -->
+</div>
+
+
+   <section class="darky how section-padding-0-70">
 
         <div class="container">
 
@@ -145,6 +172,24 @@
                 <p class="wow fadeInUp" data-wow-delay="0.4s">- TecCreed can help you become more digitally independent. We offer specialized and dedicated services that will help your business grow. Our team is driven by passion and determination to go above and beyond your standards and open up new opportunities for success.</p>
             </div>
             <div class="row">
+                          {% if work_card %}
+                     {% for work in work_card %}
+                       <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="service_single_content v3 box-shadow text-center mb-100 wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img draggable="false" src="{{work.work_card_img}}" class="white-icon" alt="">
+                            <span class="step-num">{{ loop.index }}</span>
+                        </div>
+                        <h6 class="w-text">{{work.work_card_title}}</h6>
+                        <p>{{work.work_card_des}}</p>
+                    </div>
+                     
+                </div>
+                {% endfor %}
+               
+                {% else %}
                 <div class="col-12 col-md-6 col-lg-4">
                     <!-- Content -->
                     <div class="service_single_content v3 box-shadow text-center mb-100 wow fadeInUp" data-wow-delay="0.2s">
@@ -181,9 +226,9 @@
                         <p>We are a support company. We take all the customer stress by helping you in the term of Support and will handle all of your customers. Help them from making the purchase to Solve any specific problem. .</p>
                     </div>
                 </div>
+                {% endif %}
                 
             </div>
         </div>
     </section>
-
 {% endblock %}

@@ -1,33 +1,39 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "choose-us.###",
- "creation": "2025-07-09 14:25:27.965203",
+ "autoname": "facts-card.###",
+ "creation": "2025-07-10 09:53:40.715067",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "question",
-  "answer"
+  "card_img",
+  "counter_no",
+  "title"
  ],
  "fields": [
   {
-   "fieldname": "question",
-   "fieldtype": "Data",
-   "label": "Question "
+   "fieldname": "card_img",
+   "fieldtype": "Attach Image",
+   "label": "card img"
   },
   {
-   "fieldname": "answer",
-   "fieldtype": "Text Editor",
-   "label": "Answer"
+   "fieldname": "counter_no",
+   "fieldtype": "Data",
+   "label": "counter no"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "title"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 15:24:13.697561",
+ "modified": "2025-07-10 15:19:08.276831",
  "modified_by": "Administrator",
  "module": "Technical Creed V3",
- "name": "Why Choose Us",
+ "name": "services agency facts",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

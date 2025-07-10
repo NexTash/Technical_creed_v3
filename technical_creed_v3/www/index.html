@@ -2,450 +2,382 @@
 
 {% block content %}
 
-    <!-- Welcome Area Start -->
-    <section class="hero-section de-3 section-padding" id="home">
-      <!-- Hero Content -->
-      <div class="hero-section-content">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Welcome Content -->
-            <div class="col-12 col-lg-6 col-md-12">
-              <div class="welcome-content">
-                <h1 class="fadeInUp w-text" data-wow-delay="0.2s">
-                  Comprehensive
-                  <img class="heado-img" src="/assets/technical_creed_v3/img/core-img/head.webp" alt="IT Solutions Icon" />
-                  IT Solutions &amp; Cloud Technology Experts
-                </h1>
-                <img
-                  src="/assets/technical_creed_v3/img/svg/divider-01.svg"
-                  width="100"
-                  class="mb-30"
-                  alt="divider"
-                />
-                <p class="w-text fadeInUp" data-wow-delay="0.3s">
-                  At Technical Creed, we empower businesses with cutting-edge IT solutions and cloud technology. Our expertise drives digital transformation and optimizes your operations for peak performance.
-                </p>
-                <div class="dream-btn-group fadeInUp" data-wow-delay="0.4s">
-                  <a class="btn more-btn" href="contact-us.html">Get in Touch</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="floating">
-                <img src="/assets/technical_creed_v3/img/core-img/img3.webp" alt="Cloud Technology Illustration" />
-              </div>
+<!-- Welcome Area Start -->
+<section class="hero-section de-3 section-padding" id="home">
+  <!-- Hero Content -->
+  <div class="hero-section-content">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Welcome Content -->
+        <div class="col-12 col-lg-6 col-md-12">
+          <div class="welcome-content">
+            <h1 class="fadeInUp w-text" data-wow-delay="0.2s">
+              Comprehensive
+              <img class="heado-img" src="/assets/technical_creed_v3/img/core-img/head.webp" alt="IT Solutions Icon" />
+              IT Solutions &amp; Cloud Technology Experts
+            </h1>
+            <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mb-30" alt="divider" />
+            <p class="w-text fadeInUp" data-wow-delay="0.3s">
+              At Technical Creed, we empower businesses with cutting-edge IT solutions and cloud technology. Our
+              expertise drives digital transformation and optimizes your operations for peak performance.
+            </p>
+            <div class="dream-btn-group fadeInUp" data-wow-delay="0.4s">
+              <a class="btn more-btn" href="contact-us.html">Get in Touch</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Welcome Area End -->
-
-    <div class="clearfix"></div>
-
-    <section class="darky how section-padding-100-70">
-      <div class="container">
-        <div class="section-heading text-center">
-          <div
-            class="dream-dots justify-content-center wow fadeInUp"
-            data-wow-delay="0.2s"
-          >
-            <img
-              src="/assets/technical_creed_v3/img/svg/divider-01.svg"
-              width="100"
-              class="mb-15"
-              alt="divider"
-            />
-          </div>
-          <h2 class="wow fadeInUp w-text" data-wow-delay="0.3s">
-            Our Company Services
-          </h2>
-          <p
-            class="wow fadeInUp"
-            data-wow-delay="0.4s"
-            style="
-              visibility: visible;
-              animation-delay: 0.4s;
-              animation-name: fadeInUp;
-            "
-          >
-          We provide comprehensive support to streamline your business operations and enhance customer satisfaction through our expert IT and cloud solutions.
-
-          </p>
-        </div>
-        <div class="row">
-        {% for code in codes %}
-          <div class="col-12 col-md-6 col-lg-6">
-            <!-- Content -->
-            <a
-              class="service_single_content grediant-borders box-shadow text-left wow fadeInUp"
-              data-wow-delay="0.2s"
-              href="services.html"
-            >
-              <!-- Icon -->
-              <div class="service_icon v2">
-                <img
-                  draggable="false"
-                  src="{{code.image}}"
-                  class="white-icon"
-                  alt=""
-                />
-              </div>
-              <div class="service_content">
-                <h6 class="w-text">{{code.title}}</h6>
-                <p>
-                  {{code.description}}
-                </p>
-              </div>
-            </a>
-          </div>
-        {%endfor%} 
-        </div>
-      </div>
-    </section>
-
-    <!-- About Us Area Start -->
-    <section class="about-us-area section-padding-0-0 clearfix" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-4 offset-lg-0 col-md-6">
-            <div class="welcome-meter">
-              <img draggable="false" src="/assets/technical_creed_v3/img/core-img/img4.webp" alt="" />
-            </div>
-          </div>
-          <div class="col-12 col-lg-4 offset-lg-0 mt-s">
-            <div class="who-we-contant">
-              <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s">
-                <span class="gradient-text">Our Company Community</span>
-              </div>
-              <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
-                {{community[0].community_title}}
-              </h4>
-              <img
-                src="/assets/technical_creed_v3/img/svg/divider-01.svg"
-                width="100"
-                class="mt-15"
-                alt="divider"
-              />
-            </div>
-          </div>
-          <div class="col-12 col-lg-4 offset-lg-0 mt-s">
-            <div class="who-we-contant left-bor">
-              <p>
-               {{community[0].community_description}}
-              </p>
-              <a
-                class="btn more-btn fadeInUp"
-                data-wow-delay="0.6s"
-                href="about-us.html"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  About Us Area End  -->
-
-    <!--  About Us Area Start  -->
-    <section class="about-us-area section-padding-100-0 clearfix" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-6 offset-lg-0 mt-s">
-            <div class="who-we-contant">
-              <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s">
-                <span class="gradient-text">
-                  About Our IT Technology Agency.</span
-                >
-              </div>
-              <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
-                Innovative IT & Cloud Computing Solutions for Your Business.
-              </h4>
-              <p class="fadeInUp" data-wow-delay="0.4s">
-                At Technical Creed, we are committed to driving your business forward with our comprehensive IT and cloud computing solutions. Our creative approach and technical expertise ensure that we deliver results that exceed expectations.
-
-              </p>
-              <p class="fadeInUp" data-wow-delay="0.5s">
-                With a focus on customer satisfaction and a passion for technology, we help you navigate the complexities of the digital landscape.
-
-              </p>
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="side-feature-list-item">
-                    <img
-                      src="/assets/technical_creed_v3/img/icons/f1.webp"
-                      class="check-mark-icon"
-                      alt=""
-                    />
-                    <div class="foot-c-info">
-                      Expert IT Consulting & Support
-                    </div>
-                  </div>
-                  <div class="side-feature-list-item">
-                    <img
-                      src="/assets/technical_creed_v3/img/icons/f2.webp"
-                      class="check-mark-icon"
-                      alt=""
-                    />
-                    <div class="foot-c-info">
-                      Customizable Solutions Tailored to Your Needs
-                    </div>
-                  </div>
-                  <div class="side-feature-list-item">
-                    <img
-                      src="/assets/technical_creed_v3/img/icons/f3.webp"
-                      class="check-mark-icon"
-                      alt=""
-                    />
-                    <div class="foot-c-info">
-                      Affordable Pricing & Comprehensive Results
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                class="btn more-btn mt-30 fadeInUp"
-                data-wow-delay="0.6s"
-                href="#"
-                >Read More</a
-              >
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 offset-lg-0 col-md-12">
-            <div class="welcome-meter">
-              <img
-                draggable="false"
-                class="floating"
-                src="/assets/technical_creed_v3/img/core-img/img1.webp"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  About Us Area End  -->
-    <!--  Facts Start  -->
-    <div class="section-padding-100-0" >
-      <div class="container pre-sale-bg">
-        <div class="section-heading text-center">
-          <div
-            class="dream-dots justify-content-center fadeInUp"
-            data-wow-delay="0.2s"
-          >
-            <span class="gradient-text white">Numbers Are Talking</span>
-          </div>
-          <h2 class="w-text">Our Agency Facts</h2>
-          <p class="w-text">
-            At Technical Creed, our success is measured by the numbers that reflect our commitment to excellence and the satisfaction of our clients. Explore some key statistics about our agency below:
-
-          </p>
-        </div>
-        <div class="row align-items-center" id="fact">
-          <div class="col-12">
-            <div class="fact-box count-box col-lg-3 col-xs-12">
-              <div class="inner">
-                <div class="icon-box">
-                  <img src="/assets/technical_creed_v3/img/icons/fact1.webp" alt="" />
-                </div>
-                <div class="content">
-                  <div class="count-outer">
-                    <span class="count-text counter">327</span>
-                  </div>
-                  <div class="counter-title">Happy Clients</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-xs">
-              <div class="inner">
-                <div class="icon-box">
-                  <img src="/assets/technical_creed_v3/img/icons/fact2.webp" alt="" />
-                </div>
-                <div class="content">
-                  <div class="count-outer">
-                    <span class="count-text counter">3041</span>
-                  </div>
-                  <div class="counter-title">Projects Taken</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-sm">
-              <div class="inner">
-                <div class="icon-box">
-                  <img src="/assets/technical_creed_v3/img/icons/fact3.webp" alt="" />
-                </div>
-                <div class="content">
-                  <div class="count-outer">
-                    <span class="count-text counter">23</span>
-                  </div>
-                  <div class="counter-title">Awards Won</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-sm">
-              <div class="inner">
-                <div class="icon-box">
-                  <img src="/assets/technical_creed_v3/img/icons/fact4.webp" alt="" />
-                </div>
-                <div class="content">
-                  <div class="count-outer">
-                    <span class="count-text counter">940</span>
-                  </div>
-                  <div class="counter-title">Secured Devices</div>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-6">
+          <div class="floating">
+            <img src="/assets/technical_creed_v3/img/core-img/img3.webp" alt="Cloud Technology Illustration" />
           </div>
         </div>
       </div>
     </div>
-    <section class="Projects section-padding-100">
-      <div class="container">
-        <div class="row align-items-center mb-50">
-          <div class="col-12 col-lg-6 offset-lg-0">
-            <div class="who-we-contant">
-              <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
-                {{ptd[0].project_title}}
-              </h4>
-              <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" alt="divider" />
-            </div>
+  </div>
+</section>
+
+<!-- Welcome Area End -->
+
+<div class="clearfix"></div>
+
+<section class="darky how section-padding-100-70">
+  <div class="container">
+    <div class="section-heading text-center">
+      <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+        <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mb-15" alt="divider" />
+      </div>
+      <h2 class="wow fadeInUp w-text" data-wow-delay="0.3s">
+        Our Company Services
+      </h2>
+      <p class="wow fadeInUp" data-wow-delay="0.4s" style="
+              visibility: visible;
+              animation-delay: 0.4s;
+              animation-name: fadeInUp;
+            ">
+        We provide comprehensive support to streamline your business operations and enhance customer satisfaction
+        through our expert IT and cloud solutions.
+
+      </p>
+    </div>
+    <div class="row">
+      {% for code in codes %}
+      <div class="col-12 col-md-6 col-lg-6">
+        <!-- Content -->
+        <a class="service_single_content grediant-borders box-shadow text-left wow fadeInUp" data-wow-delay="0.2s"
+          href="services.html">
+          <!-- Icon -->
+          <div class="service_icon v2">
+            <img draggable="false" src="{{code.image}}" class="white-icon" alt="" />
           </div>
-          <div class="col-12 col-lg-6 offset-lg-0 mt-s">
-            <div class="who-we-contant left-bor">
-              <p>
-                 {{ptd[0].projects_description}}
-              </p>
-            </div>
+          <div class="service_content">
+            <h6 class="w-text">{{code.title}}</h6>
+            <p>
+              {{code.description}}
+            </p>
           </div>
-        </div>
-        <div class="row">
-            {%for card in ptc %}
-          <div class="col-12 col-lg-6">
-           
-            <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
-              <div class="project_img">
-                <img src="{{card.card_images}}" class="img-responsive" alt="" />
-              </div>
-              <div class="project_info">
-                <h4 class="w-text">
-                {{card.project_title}}
-                </h4>
-                <p>{{card.project_sub_desc}}</p>
-                <a href="#" class="anchor-link"
-                  >{{card.case_study}}<span><i class="fa fa-arrow-right"></i></span
-                ></a>
-              </div>
-            </div>
-            
-          </div>
-          {% endfor %}
-          <!-- <div class="col-12 col-lg-6">
-            
-            <div class="project_single wow fadeInUp" data-wow-delay="0.3s">
-              <div class="project_img">
-                <img src="/assets/technical_creed_v3/img/projects/2.webp" class="img-responsive" alt="" />
-              </div>
-              <div class="project_info">
-                <h4 class="w-text">
-                  System Security <br />
-                  and Development
-                </h4>
-                <p>Development</p>
-                <a href="#" class="anchor-link"
-                  >Full Case Study<span><i class="fa fa-arrow-right"></i></span
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            
-            <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
-              <div class="project_img">
-                <img src="/assets/technical_creed_v3/img/projects/3.webp" class="img-responsive" alt="" />
-              </div>
-              <div class="project_info">
-                <h4 class="w-text">
-                  Cloud Migration<br />
-                  and Deployment
-                </h4>
-                <p>Blockchain</p>
-                <a href="#" class="anchor-link"
-                  >Full Case Study<span><i class="fa fa-arrow-right"></i></span
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            
-            <div class="project_single wow fadeInUp" data-wow-delay="0.3s">
-              <div class="project_img">
-                <img src="/assets/technical_creed_v3/img/projects/4.webp" class="img-responsive" alt="" />
-              </div>
-              <div class="project_info">
-                <h4 class="w-text">
-                  Network Security <br />
-                  Cloud Computing
-                </h4>
-                <p>Networking</p>
-                <a href="#" class="anchor-link"
-                  >Full Case Study<span><i class="fa fa-arrow-right"></i></span
-                ></a>
-              </div>
-            </div>
-          </div> -->
+        </a>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+</section>
+
+<!-- About Us Area Start -->
+<section class="about-us-area section-padding-0-0 clearfix" id="about">
+  <div class="container">
+    <div class="row align-items-center">
+      {% if community and community[0] %}
+      <!-- Dynamic Content from community -->
+      <div class="col-12 col-lg-4 offset-lg-0 col-md-6">
+        <div class="welcome-meter">
+          <img draggable="false" src="/assets/technical_creed_v3/img/core-img/img4.webp" alt="" />
         </div>
       </div>
-    </section>
-    <!-- FAQ & Timeline Area Start -->
-    <div class="faq-timeline-area section-padding-100-85" id="faq">
-      <div class="container">
-        <div class="section-heading text-center">
-          <div
-            class="dream-dots justify-content-center fadeInUp"
-            data-wow-delay="0.2s"
-          >
-            <img
-              src="/assets/technical_creed_v3/img/svg/divider-01.svg"
-              width="100"
-              class="mb-15"
-              alt="divider"
-            />
+      <div class="col-12 col-lg-4 offset-lg-0 mt-s">
+        <div class="who-we-contant">
+          <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s">
+            <span class="gradient-text">Our Company Community</span>
           </div>
-          <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Why Choose Us?</h2>
-          <p class="fadeInUp" data-wow-delay="0.4s">
-            We are the best to provide the services and will help you out to take all the stress of your business
-          </p>
+          <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
+            {{ community[0].community_title }}
+          </h4>
+          <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mt-15" alt="divider" />
         </div>
-        <div class="row align-items-center">
-          <div
-            class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-12"
-          >
-            <img
-              draggable="false"
-              src="/assets/technical_creed_v3/img/core-img/img2.webp"
-              alt=""
-              class="center-block img-responsive"
-            />
+      </div>
+      <div class="col-12 col-lg-4 offset-lg-0 mt-s">
+        <div class="who-we-contant left-bor">
+          <p>{{ community[0].community_description }}</p>
+          <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="about-us.html">Read More</a>
+        </div>
+      </div>
+
+      {% else %}
+      <!-- Static Default Content if no community data -->
+      <div class="col-12 col-lg-4 offset-lg-0 col-md-6">
+        <div class="welcome-meter">
+          <img draggable="false" src="./assets/technical_creed_v3/img/core-img/img4.webp" alt="" />
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 offset-lg-0 mt-s">
+        <div class="who-we-contant">
+          <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s">
+            <span class="gradient-text">Our Company Community</span>
           </div>
-          <div class="col-12 col-lg-6 col-md-12">
-            <div class="dream-faq-area mt-s">
-              <dl style="margin-bottom: 0">
-                <!-- Single FAQ Area -->
-                 {% for q in y %}
-                <dt class="wave fadeInUp" data-wow-delay="0.2s">
-                  {{q.question}}
-                </dt>
-                <dd class="fadeInUp" data-wow-delay="0.3s">
-                  <p>
-                   {{q.answer}}
-                  </p>
-                </dd>
-                {%endfor%}
-<!--                 
+          <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
+            Top Technology and IT services with Our Agency..
+          </h4>
+          <img src="./assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mt-15" alt="divider" />
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 offset-lg-0 mt-s">
+        <div class="who-we-contant left-bor">
+          <p>
+            - At TecCreed, we believe in creating a work environment that fosters creativity, innovation, and
+            collaboration. We are a team of passionate individuals who are committed to making a positive impact through
+            our work.
+          </p>
+          <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="about-us.html">Read More</a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+</section>
+<!--  About Us Area End  -->
+
+<!--  About Us Area Start  -->
+<section class="about-us-area section-padding-100-0 clearfix" id="about">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6 offset-lg-0 mt-s">
+        <div class="who-we-contant">
+          <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s">
+            <span class="gradient-text">
+              About Our IT Technology Agency.</span>
+          </div>
+          <h4 class="fadeInUp w-text" data-wow-delay="0.3s">
+            Innovative IT & Cloud Computing Solutions for Your Business.
+          </h4>
+          <p class="fadeInUp" data-wow-delay="0.4s">
+            At Technical Creed, we are committed to driving your business forward with our comprehensive IT and cloud
+            computing solutions. Our creative approach and technical expertise ensure that we deliver results that
+            exceed expectations.
+
+          </p>
+          <p class="fadeInUp" data-wow-delay="0.5s">
+            With a focus on customer satisfaction and a passion for technology, we help you navigate the complexities of
+            the digital landscape.
+
+          </p>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="side-feature-list-item">
+                <img src="/assets/technical_creed_v3/img/icons/f1.webp" class="check-mark-icon" alt="" />
+                <div class="foot-c-info">
+                  Expert IT Consulting & Support
+                </div>
+              </div>
+              <div class="side-feature-list-item">
+                <img src="/assets/technical_creed_v3/img/icons/f2.webp" class="check-mark-icon" alt="" />
+                <div class="foot-c-info">
+                  Customizable Solutions Tailored to Your Needs
+                </div>
+              </div>
+              <div class="side-feature-list-item">
+                <img src="/assets/technical_creed_v3/img/icons/f3.webp" class="check-mark-icon" alt="" />
+                <div class="foot-c-info">
+                  Affordable Pricing & Comprehensive Results
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 offset-lg-0 col-md-12">
+        <div class="welcome-meter">
+          <img draggable="false" class="floating" src="/assets/technical_creed_v3/img/core-img/img1.webp" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  About Us Area End  -->
+<!--  Facts Start  -->
+<div class="section-padding-100-0">
+  <div class="container pre-sale-bg">
+    <div class="section-heading text-center">
+      <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+        <span class="gradient-text white">Numbers Are Talking</span>
+      </div>
+      <h2 class="w-text">Our Agency Facts</h2>
+      <p class="w-text">
+        At Technical Creed, our success is measured by the numbers that reflect our commitment to excellence and the
+        satisfaction of our clients. Explore some key statistics about our agency below:
+
+      </p>
+    </div>
+    <!-- start -->
+    <div class="row align-items-center" id="fact">
+      <div class="col-12">
+        {% if agency_card %}
+        {% for card in agency_card %}
+
+        <div class="fact-box count-box col-lg-3 col-xs-12">
+          <div class="inner">
+            <div class="icon-box">
+              <img src="{{ card.card_img }}" alt="" />
+            </div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">{{ card.counter_no }}</span>
+              </div>
+              <div class="counter-title">{{ card.title }}</div>
+            </div>
+          </div>
+        </div>
+
+        {% endfor%}
+        {% else %}
+        <div class="col-lg-3 col-sm-6">
+          <div class="fact-box count-box">
+            <div class="inner">
+              <div class="icon-box"><img src="./assets/technical_creed_v3/img/icons/fact1.webp" alt=""></div>
+              <div class="content">
+                <div class="count-outer">
+                  <span class="count-text counter">327</span>
+                </div>
+                <div class="counter-title">Happy Clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-xs">
+          <div class="inner">
+            <div class="icon-box">
+              <img src="/assets/technical_creed_v3/img/icons/fact2.webp" alt="" />
+            </div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">3041</span>
+              </div>
+              <div class="counter-title">Projects Taken</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-sm">
+          <div class="inner">
+            <div class="icon-box">
+              <img src="/assets/technical_creed_v3/img/icons/fact3.webp" alt="" />
+            </div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">23</span>
+              </div>
+              <div class="counter-title">Awards Won</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact-box count-box col-lg-3 col-xs-12 fact-box-sm">
+          <div class="inner">
+            <div class="icon-box">
+              <img src="/assets/technical_creed_v3/img/icons/fact4.webp" alt="" />
+            </div>
+            <div class="content">
+              <div class="count-outer">
+                <span class="count-text counter">940</span>
+              </div>
+              <div class="counter-title">Secured Devices</div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <!-- end -->
+
+  </div>
+</div>
+<section class="Projects section-padding-100">
+  <div class="container">
+    <div class="row align-items-center mb-50">
+      {% if ptd and ptd[0] %}
+        <div class="col-12 col-lg-6">
+          <div class="who-we-contant">
+            <h4 class="fadeInUp w-text" data-wow-delay="0.3s">{{ ptd[0].project_title }}</h4>
+            <img src="./assets/technical_creed_v3/img/svg/divider-01.svg" width="100" alt="divider" />
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mt-s">
+          <div class="who-we-contant left-bor">
+            <p>{{ ptd[0].projects_description }}</p>
+          </div>
+        </div>
+      {% else %}
+        <div class="col-12">
+          <h4 class="text-center w-text">No Found Projects title and description</h4>
+        </div>
+      {% endif %}
+    </div>
+   <div class="row">
+      {% if ptc %}
+        {% for card in ptc %}
+          <div class="col-12 col-lg-6">
+            <div class="project_single wow fadeInUp" data-wow-delay="0.2s">
+              <div class="project_img">
+                <img src="{{ card.card_images }}" class="img-responsive" alt="" />
+              </div>
+              <div class="project_info">
+                <h4 class="w-text">{{ card.project_title }}</h4>
+                <p>{{ card.project_sub_desc }}</p>
+                <a href="projectdetail.html" class="anchor-link">
+                  {{ card.case_study }}<span><i class="fa fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+      <h1 style="color: aqua;">card data here dynamic</h1>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- FAQ & Timeline Area Start -->
+<div class="faq-timeline-area section-padding-100-85" id="faq">
+  <div class="container">
+    <div class="section-heading text-center">
+      <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+        <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mb-15" alt="divider" />
+      </div>
+      <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Why Choose Us?</h2>
+      <p class="fadeInUp" data-wow-delay="0.4s">
+        We are the best to provide the services and will help you out to take all the stress of your business
+      </p>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-12">
+        <img draggable="false" src="/assets/technical_creed_v3/img/core-img/img2.webp" alt=""
+          class="center-block img-responsive" />
+      </div>
+      <div class="col-12 col-lg-6 col-md-12">
+        <div class="dream-faq-area mt-s">
+          <dl style="margin-bottom: 0">
+            <!-- Single FAQ Area -->
+            {% for q in y %}
+            <dt class="wave fadeInUp" data-wow-delay="0.2s">
+              {{q.question}}
+            </dt>
+            <dd class="fadeInUp" data-wow-delay="0.3s">
+              <p>
+                {{q.answer}}
+              </p>
+            </dd>
+            {%endfor%}
+            <!--                 
                 <dt class="wave fadeInUp" data-wow-delay="0.3s">
                   What is the best features and services we deiver?
                 </dt>
@@ -472,69 +404,57 @@
                     Getting started with our services is simple and straightforward.Explore our website to learn more about our offerings and expertise.Contact us via phone, email, or our online inquiry form to discuss your requirements.
                   </p>
                 </dd> -->
-              </dl>
-            </div>
-          </div>
+          </dl>
         </div>
       </div>
     </div>
-    <!-- FAQ & Timeline Area End -->
-    <!-- Team Area Start -->
-    <section class="our_team_area section-padding-0-70 clearfix" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-heading text-center">
-              <div
-                class="dream-dots justify-content-center fadeInUp"
-                data-wow-delay="0.2s"
-              >
-                <img
-                  src="/assets/technical_creed_v3/img/svg/divider-01.svg"
-                  width="100"
-                  class="mb-15"
-                  alt="divider"
-                />
-              </div>
-           {% if team and team[0] %}
-  <h2 class="fadeInUp w-text" data-wow-delay="0.3s">{{ team[0].team_title }}</h2>
-  <p class="fadeInUp" data-wow-delay="0.4s">
-    {{ team[0].team_description }}
-  </p>
-{% else %}
-  <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Meet Our Awesome Team</h2>
-  <p class="fadeInUp" data-wow-delay="0.4s">
-    Our team consists of dedicated professionals who are passionate about delivering exceptional IT solutions and cloud technology services.
-  </p>
-{% endif %}
+  </div>
+</div>
+<!-- FAQ & Timeline Area End -->
+<!-- Team Area Start -->
+<section class="our_team_area section-padding-0-70 clearfix" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-heading text-center">
+          <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+            <img src="/assets/technical_creed_v3/img/svg/divider-01.svg" width="100" class="mb-15" alt="divider" />
+          </div>
+          {% if team and team[0] %}
+          <h2 class="fadeInUp w-text" data-wow-delay="0.3s">{{ team[0].team_title }}</h2>
+          <p class="fadeInUp" data-wow-delay="0.4s">
+            {{ team[0].team_description }}
+          </p>
+          {% else %}
+          <h2 class="fadeInUp w-text" data-wow-delay="0.3s">Meet Our Awesome Team</h2>
+          <p class="fadeInUp" data-wow-delay="0.4s">
+            Our team consists of dedicated professionals who are passionate about delivering exceptional IT solutions
+            and cloud technology services.
+          </p>
+          {% endif %}
 
-            </div>
-          </div>
-        </div>
-        <div class="row team-row">
-          <!-- Single Team Member -->
-          {% for link in links %}
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-team-member fadeInUp" data-wow-delay="0.2s">
-              <!-- Image -->
-              <div class="team-member-thumb">
-                <img
-                  draggable="false"
-                  src="{{ link.image }}"
-                  class="center-block"
-                  alt=""
-                />
-              </div>
-              <!-- Team Info -->
-              <div class="team-info">
-                <h5 class="w-text">{{link.member_name }}</h5>
-                <p class="g-text">{{link.designation }}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
         </div>
       </div>
-    </section>
-    <!-- Team Area End -->
-  {% endblock %}
+    </div>
+    <div class="row team-row">
+      <!-- Single Team Member -->
+      {% for link in links %}
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single-team-member fadeInUp" data-wow-delay="0.2s">
+          <!-- Image -->
+          <div class="team-member-thumb">
+            <img draggable="false" src="{{ link.image }}" class="center-block" alt="" />
+          </div>
+          <!-- Team Info -->
+          <div class="team-info">
+            <h5 class="w-text">{{link.member_name }}</h5>
+            <p class="g-text">{{link.designation }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Team Area End -->
+{% endblock %}

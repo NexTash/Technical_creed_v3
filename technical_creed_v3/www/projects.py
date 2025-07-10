@@ -9,11 +9,11 @@ def get_context(context):
 
 
     context.update({
-        "docs": docs or [],
-        "team": team or [],
-        "ptd":ptd or [],
-        "ptc":ptc or [],
-        "community":community or []
+        "docs": docs ,
+        "team": team ,
+        "ptd":ptd,
+        "ptc":ptc ,
+        "community":community 
     })
 
     
