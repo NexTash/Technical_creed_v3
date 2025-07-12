@@ -1,87 +1,98 @@
-<!--  Footer Area Start  -->
 <footer class="footer-area bg-img" style="background-image: url(/assets/technical_creed_v3/img/core-img/pattern.webp);">
     <div class="footer-content-area ">
         <div class="container">
             <div class="row ">
+{% set privacy = frappe.get_all("Privacy Policy", "*", limit=5) %}
+{% set navi = frappe.get_all("Navigate footer", "*", limit=5) %}
+{% set contact = frappe.get_all("Contacts Footer", "*", limit=2) %}
+
                 <div class="col-12 col-lg-4 col-md-6">
                     <div class="footer-copywrite-info">
-                        <!-- Copywrite -->
                         <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
                             <div class="footer-logo">
-                                <a href="#"><img draggable="false" src="/assets/technical_creed_v3/img/core-img/logo.webp" alt="logo">
-                                    TechnicalCreed </a>
+                                <a href="#"><img draggable="false" src="/assets/technical_creed_v3/img/core-img/logo.webp" alt="logo"> TechnicalCreed</a>
                             </div>
-                            <p>Empower your business for the digital era with our tailored strategies.</p>
+                            {% if footer and footer.footer_text %}
+                                <p>{{ footer.footer_text }}</p>
+                            {% else %}
+                                <p>Empower your business for the digital era with our tailored strategies.</p>
+                            {% endif %}
                         </div>
-                        <!-- Social Icon -->
+
                         <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            {% if footer and footer.social_links %}
+                                {% for link in footer.social_links %}
+                                    <a href="{{ link.url }}"><i class="fa {{ link.icon }}" aria-hidden="true"></i></a>
+                                {% endfor %}
+                            {% else %}
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-lg-3 col-md-6">
                     <div class="contact_info_area d-sm-flex justify-content-between">
-                        <!-- Content Info -->
                         <div class="contact_info mt-x text-center fadeInUp" data-wow-delay="0.3s">
                             <h5>PRIVACY & TOS</h5>
-                            <a href="#">
-                                <p>Advertiser Agreement</p>
-                            </a>
-                            <a href="#">
-                                <p>Acceptable Use Policy</p>
-                            </a>
-                            <a href="#">
-                                <p>Privacy Policy</p>
-                            </a>
-                            <a href="#">
-                                <p>Technology Privacy</p>
-                            </a>
-                            <a href="#">
-                                <p>Developer Agreement</p>
-                            </a>
+                            {% if privacy %}
+                                {% for link in privacy %}
+                                    <a href="{{ link.url }}"><p>{{ link.label }}</p></a>
+                                {% endfor %}
+                            {% else %}
+                                <a href="#"><p>Advertiser Agreement</p></a>
+                                <a href="#"><p>Acceptable Use Policy</p></a>
+                                <a href="#"><p>Privacy Policy</p></a>
+                                <a href="#"><p>Technology Privacy</p></a>
+                                <a href="#"><p>Developer Agreement</p></a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2 col-md-6 ">
-                    <!-- Content Info -->
+
+                <div class="col-12 col-lg-2 col-md-6">
                     <div class="contact_info_area d-sm-flex justify-content-between">
                         <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
                             <h5>NAVIGATE</h5>
-                            <a href="#">
-                                <p>Advertisers</p>
-                            </a>
-                            <a href="#">
-                                <p>Developers</p>
-                            </a>
-                            <a href="#">
-                                <p>Resources</p>
-                            </a>
-                            <a href="#">
-                                <p>Company</p>
-                            </a>
-                            <a href="#">
-                                <p>Connect</p>
-                            </a>
+                            {% if navi %}
+                                {% for links in navi %}
+                                    <a href="{{ links.url }}"><p>{{ links.label }}</p></a>
+                                {% endfor %}
+                            {% else %}
+                                <a href="#"><p>Advertisers</p></a>
+                                <a href="#"><p>Developers</p></a>
+                                <a href="#"><p>Resources</p></a>
+                                <a href="#"><p>Company</p></a>
+                                <a href="#"><p>Connect</p></a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 col-md-6 ">
+
+                <div class="col-12 col-lg-3 col-md-6">
                     <div class="contact_info_area d-sm-flex justify-content-between">
-                        <!-- Content Info -->
-                        <div class="contact_info mt-s text-center fadeInUp"     data-wow-delay="0.4s" style="color: #fff;">
-                         <h5>CONTACT US</h5>
-                            <p><a href="mailto:support@technicalcreed.com">support@technicalcreed.com</a></p>
-                         <p><a href="https://maps.app.goo.gl/gYBJVpfwTsqWcVT2A">Office #D2, 1st Floor, Red Mall, Shalimar Link Road, Lahore</a></p>
-                            <p><a href="tel:+923218838388">0092 321 8838 388</a></p>
+                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s" style="color: #fff;">
+                            <h5>CONTACT US</h5>
+                            {% if contact %}
+                                {% for c in contact %}
+                                    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a></p>
+                                    <p>{{ c.location }}</p>
+                                    <p><a href="tel:{{ c.phone_number }}">{{ c.phone_number }}</a></p>
+                                {% endfor %}
+                            {% else %}
+                                <p><a href="mailto:support@technicalcreed.com">support@technicalcreed.com</a></p>
+                                <p>Office #D2, 1st Floor, Red Mall, Shalimar Link Road, Lahore</p>
+                                <p><a href="tel:+923218838388">0092 321 8838 388</a></p>
+                            {% endif %}
                         </div>
+                    </div>
                 </div>
-                </div>
+
             </div>
         </div>
     </div>
 </footer>
-<!--  Footer Area End  -->

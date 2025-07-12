@@ -24,8 +24,6 @@
 <!-- ✅ Project Title & Description -->
 <section class="Projects section-padding-100">
   <div class="container">
-    
-    <!-- Top Section with Title and Description -->
     <div class="row align-items-center mb-50">
       {% if ptd and ptd[0] %}
         <div class="col-12 col-lg-6">
@@ -45,9 +43,7 @@
         </div>
       {% endif %}
     </div>
-
-    <!-- Projects Cards Section -->
-    <div class="row">
+   <div class="row">
       {% if ptc %}
         {% for card in ptc %}
           <div class="col-12 col-lg-6">
@@ -68,9 +64,8 @@
       {% else %}
       <h1 style="color: aqua;">card data here dynamic</h1>
       {% endif %}
-    </div> <!-- ✅ Closing div for project cards row -->
-    
-  </div> <!-- container -->
+    </div>
+  </div>
 </section>
 
 
